@@ -37,6 +37,7 @@ class ModelWrapper(object):
             test_acc = test_correct / total
         return test_loss, test_acc
 
+
     def _eval_on_batch(self, inputs, targets):
         inputs, targets = inputs.to(self.device), targets.to(self.device)
         outputs = self.model(inputs)
